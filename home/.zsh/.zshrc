@@ -18,6 +18,11 @@ export EDITOR=nvim
 export GIT_EDITOR=nvim
 export TERM="xterm-256color"
 
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000
+export SAVEHIST=20000
+setopt hist_ignore_dups
+
 export PATH="$PATH:$HOME/.anyenv/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.jenv/bin"
