@@ -1,7 +1,7 @@
 # dotfiles
 
 - zsh
-  - (prezto)[https://github.com/sorin-ionescu/prezto]
+  - [prezto](https://github.com/sorin-ionescu/prezto)
 - tmux
 - neovim
 - vim
