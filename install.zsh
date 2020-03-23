@@ -1,15 +1,24 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
+# prezto setup
+ZDOTDIR=$HOME/.zsh
+PREZTO_DIR=$ZDOTDIR/.zprezto
+
+rm -rf $ZDOTDIR
+git clone --recursive https://github.com/sorin-ionescu/prezto.git $PREZTO_DIR
+
+setopt EXTENDED_GLOB
+for rcfile in $PREZTO_DIR/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "$ZDOTDIR/.${rcfile:t}"
+done
+
+# dotfiles setup
 DOTFILES_ROOT=$(cd $(dirname $0); pwd)
 
 dotfiles=$(find $DOTFILES_ROOT/home -type f)
 dotfile_dirs=("/" "/.zsh/" "/.config/" "/.config/nvim/")
 
-mkdir -p $HOME/.zsh
 mkdir -p $HOME/.config/nvim
-
-# vim-plug
-# prezto
 
 for dotfile in $dotfiles; do
   filename=$(basename $dotfile)
