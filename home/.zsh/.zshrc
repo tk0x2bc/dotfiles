@@ -18,6 +18,8 @@ export EDITOR=nvim
 export GIT_EDITOR=nvim
 export TERM="xterm-256color"
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 13)
+
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1000
 export SAVEHIST=20000
