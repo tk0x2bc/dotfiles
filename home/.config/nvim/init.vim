@@ -627,7 +627,7 @@ endfunction
 function! s:create_window(config)
     let buf = nvim_create_buf(v:false, v:true)
     let win_id = nvim_open_win(buf, v:true, a:config)
-    hi mycolor guifg=#ffffff guibg=#dd6900
+    highlight mycolor guifg=#ffffff guibg=#dd6900
     call nvim_win_set_option(win_id, 'winhighlight', 'Normal:mycolor')
     call nvim_win_set_option(win_id, 'winblend', 40)
     return win_id
@@ -693,7 +693,15 @@ function! s:main()
     let col = s:get_col()
     let width = s:get_width()
     let height = s:get_height()
-    let config = { 'relative': 'editor', 'row': start_row, 'col': col, 'width': width, 'height': height, 'anchor': 'NW', 'style': 'minimal',}
+    let config = {
+          \ 'relative': 'editor',
+          \ 'row': start_row,
+          \ 'col': col,
+          \ 'width': width,
+          \ 'height': height,
+          \ 'anchor': 'NW',
+          \ 'style': 'minimal',
+          \ }
     if width == 0 || height == 0
         return
     endif
