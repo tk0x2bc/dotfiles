@@ -65,6 +65,8 @@ Plug 'slim-template/vim-slim'
 Plug 'Shougo/junkfile.vim'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'pechorin/any-jump.vim'
+Plug 'mattn/webapi-vim'
+Plug 'LeafCage/vimhelpgenerator'
 
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
@@ -157,6 +159,13 @@ let g:closetag_emptyTags_caseSensitive=1
 let g:closetag_shortcut='>'
 let g:closetag_close_shortcut='<leader>>'
 let g:hugohelper_spell_check_lang='en_us'
+let g:vimhelpgenerator_version=''
+let g:vimhelpgenerator_author='Author: '
+let g:vimhelpgenerator_contents={
+      \ 'usage': 1,
+      \ 'variables': 1,
+      \ 'functions': 1,
+      \ }
 
 " =======================================================
 " Functions
