@@ -89,8 +89,8 @@ scriptencoding=utf-8
 syntax enable
 
 "colorscheme iceberg
-"colorscheme rigel
-colorscheme molokai
+colorscheme rigel
+"colorscheme molokai
 "colorscheme pulumi
 
 set encoding=utf-8
