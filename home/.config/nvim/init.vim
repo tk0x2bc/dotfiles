@@ -67,6 +67,7 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'pechorin/any-jump.vim'
 Plug 'mattn/webapi-vim'
 Plug 'LeafCage/vimhelpgenerator'
+Plug 'kristijanhusak/vim-carbon-now-sh'
 
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
