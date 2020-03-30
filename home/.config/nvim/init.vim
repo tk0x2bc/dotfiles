@@ -328,6 +328,13 @@ endfunction
 autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
   imap <silent><buffer><C-o> <Plug>(denite_filter_quit)
+  imap <silent><buffer><Esc> <Plug>(denite_filter_quit)
+  "call deoplete#custom#buffer_option('auto_complete', v:false)
+endfunction
+
+autocmd User denite-preview call s:denite_preview()
+function! s:denite_preview() abort
+  setlocal number
 endfunction
 
 autocmd FileType defx call s:defx_my_settings()
