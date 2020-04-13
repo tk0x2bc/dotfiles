@@ -17,6 +17,7 @@ export MANPATH="/usr/local/share/man:/usr/local/man:/usr/share/man"
 export EDITOR=nvim
 export GIT_EDITOR=nvim
 export TERM="xterm-256color"
+export ZPLUG_HOME=/usr/local/opt/zplug
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 13)
 
@@ -35,6 +36,8 @@ export PATH="$PATH:$GOPATH/bin"
 
 # z
 . /usr/local/etc/profile.d/z.sh
+# zplug
+# source $ZPLUG_HOME/init.zsh
 
 eval "$(anyenv init -)"
 eval "$(direnv hook zsh)"
