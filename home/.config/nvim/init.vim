@@ -168,6 +168,8 @@ let g:vimhelpgenerator_contents={
       \ 'variables': 1,
       \ 'functions': 1,
       \ }
+let g:lsp_log_verbose=1
+let g:lsp_log_file=expand('~/vim-lsp.log')
 
 " =======================================================
 " Functions
