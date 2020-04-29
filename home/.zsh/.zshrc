@@ -17,7 +17,11 @@ export MANPATH="/usr/local/share/man:/usr/local/man:/usr/share/man"
 export EDITOR=nvim
 export GIT_EDITOR=nvim
 export TERM="xterm-256color"
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME="/usr/local/opt/zplug"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 13)
 
