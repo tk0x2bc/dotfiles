@@ -2,7 +2,16 @@
 " ~/.config/nvim/init.vim
 " =======================================================
 
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim
+    \ --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/vim-plug'
 
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -56,7 +65,7 @@ Plug 'posva/vim-vue'
 Plug 'othree/html5.vim'
 Plug 'robertbasic/vim-hugo-helper'
 Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-surround'
 Plug 'simeji/winresizer'
 Plug 'luochen1990/rainbow'
@@ -70,6 +79,7 @@ Plug 'mattn/webapi-vim'
 Plug 'LeafCage/vimhelpgenerator'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'easymotion/vim-easymotion'
 
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
