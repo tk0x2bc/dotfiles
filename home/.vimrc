@@ -8,6 +8,8 @@ filetype plugin indent on
 
 syntax enable
 
+colorscheme default
+
 set encoding=utf-8
 set fileencoding=utf-8
 set helplang=ja
