@@ -50,7 +50,16 @@ set wildmode=longest:full,full
 set nocompatible
 
 let mapleader="\<Space>"
+let g:netrw_liststyle=3
+let g:netrw_banner=1
+let g:netrw_sizestyle="H"
+let g:netrw_timefmt="%Y/%m/%d(%a) %H:%M:%S"
+let g:netrw_preview=1
+let g:netrw_altv=1
+let g:netrw_alto=1
 
 nnoremap <silent><Esc><Esc> :nohlsearch<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
+
+nnoremap ,d :Ex<CR>
