@@ -62,4 +62,4 @@ nnoremap <silent><Esc><Esc> :nohlsearch<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
 
-nnoremap ,d :Ex<CR>
+nnoremap ,e :Ex<CR>
