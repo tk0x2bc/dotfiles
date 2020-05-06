@@ -57,7 +57,7 @@ Plug 'vim-jp/vimdoc-ja'
 Plug 'mattn/vim-sl'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
-Plug 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'jxnblk/vim-mdx-js'
@@ -80,6 +80,8 @@ Plug 'LeafCage/vimhelpgenerator'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'guns/vim-sexp', { 'for': 'clojure' }
+Plug 'liquidz/vim-iced', { 'for': 'clojure' }
 
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
