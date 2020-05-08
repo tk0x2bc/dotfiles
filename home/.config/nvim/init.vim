@@ -81,8 +81,8 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'easymotion/vim-easymotion'
 
-"Plug 'guns/vim-sexp', { 'for': 'clojure' }
-"Plug 'liquidz/vim-iced', { 'for': 'clojure' }
+Plug 'guns/vim-sexp', { 'for': 'clojure' }
+Plug 'liquidz/vim-iced', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Plug 'prabirshrestha/asyncomplete.vim'
