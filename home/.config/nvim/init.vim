@@ -80,6 +80,7 @@ Plug 'LeafCage/vimhelpgenerator'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'gre/play2vim'
 
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'liquidz/vim-iced', { 'for': 'clojure' }
