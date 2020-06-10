@@ -10,6 +10,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+if [[ -s "$HOME/.config/up/up.sh" ]]; then
+  source "$HOME/.config/up/up.sh"
+fi
+
 # Customize to your needs...
 
 export GOPATH="$HOME/.go"
