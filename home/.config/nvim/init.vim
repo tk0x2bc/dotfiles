@@ -333,6 +333,7 @@ autocmd BufRead,BufNewFile *.slim set filetype=slim
 autocmd BufRead,BufNewFile *.tsx set filetype=tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=jsx
 autocmd BufRead,BufNewFile *.sbt set filetype=scala
+autocmd BufRead,BufNewFile *.js set filetype=javascript
 
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
