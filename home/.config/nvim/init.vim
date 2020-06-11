@@ -21,6 +21,7 @@ Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'mattn/vim-lsp-icons'
 Plug 'ryanolsonx/vim-lsp-typescript'
 Plug 'ryanolsonx/vim-lsp-python'
+Plug 'lighttiger2505/sqls.vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
