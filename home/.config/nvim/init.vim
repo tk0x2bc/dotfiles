@@ -188,6 +188,7 @@ let g:vimhelpgenerator_contents={
       \ }
 let g:lsp_log_verbose=1
 let g:lsp_log_file=expand('~/vim-lsp.log')
+let g:fern#logfile=expand('~/fern.tsv')
 
 " =======================================================
 " Functions
@@ -240,7 +241,7 @@ nnoremap <silent>,l :BLines<CR>
 nnoremap <silent>,h :History<CR>
 nnoremap <silent>,m :Mark<CR>
 nnoremap <silent>,ag :Ag<CR>
-" nnoremap <silent>,d :Defx<CR>
+nnoremap <silent>,d :Defx<CR>
 nnoremap <silent>,n :NERDTreeToggle<CR>
 " https://medium.com/@bookun/vim-advent-calendar-2019-12-20-63a12396211f
 nnoremap <silent>df :Deol -split=floating<CR>
@@ -329,7 +330,6 @@ augroup MakefileTab
   autocmd FileType make set noexpandtab nosmarttab
 augroup END
 
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | Defx | endif
 autocmd BufRead,BufNewFile *.slim set filetype=slim
 autocmd BufRead,BufNewFile *.tsx set filetype=tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=jsx
