@@ -41,6 +41,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-comparator-lexical.vim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -189,6 +190,7 @@ let g:vimhelpgenerator_contents={
 let g:lsp_log_verbose=1
 let g:lsp_log_file=expand('~/vim-lsp.log')
 let g:fern#logfile=expand('~/fern.tsv')
+let g:fern#comparator='lexical'
 
 " =======================================================
 " Functions
