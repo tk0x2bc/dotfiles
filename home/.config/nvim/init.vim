@@ -333,6 +333,8 @@ augroup MakefileTab
   autocmd FileType make set noexpandtab nosmarttab
 augroup END
 
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | Defx | endif
+
 autocmd BufRead,BufNewFile *.slim set filetype=slim
 autocmd BufRead,BufNewFile *.tsx set filetype=tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=jsx
@@ -370,6 +372,7 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> p defx#do_action('paste')
   nnoremap <silent><buffer><expr> v defx#do_action('open', 'vsplit')
   nnoremap <silent><buffer><expr> i defx#do_action('open', 'split')
+  nnoremap <silent><buffer><expr> t defx#do_action('open', 'tabnew')
   nnoremap <silent><buffer><expr> o defx#do_action('open_or_close_tree')
   nnoremap <silent><buffer><expr> O defx#do_action('open_tree_recursive')
   nnoremap <silent><buffer><expr> x defx#do_action('close_tree')
