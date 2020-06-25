@@ -63,3 +63,5 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
 
 nnoremap ,e :Ex<CR>
+
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | Ex | endif
