@@ -85,6 +85,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'gre/play2vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'tyru/caw.vim'
+Plug 'lambdalisue/readablefold.vim'
 
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'liquidz/vim-iced', { 'for': 'clojure' }
