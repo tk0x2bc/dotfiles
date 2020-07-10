@@ -34,6 +34,7 @@ export HISTSIZE=1000
 export SAVEHIST=20000
 setopt hist_ignore_dups
 
+export PATH="$PATH:$HOME/.anyenv/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.jenv/bin"
 export PATH="$PATH:$HOME/.local/bin"
