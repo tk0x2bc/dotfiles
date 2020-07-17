@@ -157,6 +157,8 @@ set wildmenu
 set wildmode=longest:full,full
 set nocompatible
 set inccommand=split
+set noerrorbells
+set novisualbell
 
 let mapleader="\<Space>"
 let NERDTreeShowHidden=1

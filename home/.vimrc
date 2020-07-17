@@ -18,6 +18,7 @@ set backspace=2
 set tabstop=2
 set shiftwidth=2
 set laststatus=2
+set statusline=\ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 set nobackup
 set noswapfile
 set ruler
@@ -48,6 +49,8 @@ set wildchar=<TAB>
 set wildmenu
 set wildmode=longest:full,full
 set nocompatible
+set noerrorbells
+set novisualbell
 
 let mapleader="\<Space>"
 let g:netrw_liststyle=3
