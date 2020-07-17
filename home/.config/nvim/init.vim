@@ -254,8 +254,6 @@ nnoremap <silent>df :Deol -split=floating<CR>
 nnoremap <silent>dv :Deol -split=vertical<CR>
 nnoremap <silent>dx :Deol -split=horizontal<CR>
 nnoremap <silent>bg (deol_bg)
-nnoremap sh :split<CR>
-nnoremap sv :vsplit<CR>
 
 " =======================================================
 " Dark powerd Settings
