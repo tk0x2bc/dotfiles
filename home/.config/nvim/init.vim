@@ -33,6 +33,8 @@ Plug 'Shougo/deoplete-terminal'
 Plug 'zchee/deoplete-zsh'
 Plug 'Shougo/deol.nvim'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'kristijanhusak/defx-icons'
+" Plug 'kristijanhusak/defx-git'
 
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
@@ -52,51 +54,47 @@ Plug 'Rigellute/rigel'
 Plug 'tomasr/molokai'
 Plug 'pgavlin/pulumi.vim'
 
-Plug 'terryma/vim-multiple-cursors'
-Plug 'vim-scripts/ruby-matchit'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'vim-jp/vimdoc-ja'
-Plug 'mattn/vim-sl'
+Plug 'gre/play2vim'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'vim-scripts/ruby-matchit'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'posva/vim-vue'
 Plug 'othree/html5.vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'hashivim/vim-terraform'
 Plug 'robertbasic/vim-hugo-helper'
 Plug 'alvan/vim-closetag'
+Plug 'slim-template/vim-slim', { 'for': 'slim' }
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
-Plug 'tpope/vim-surround'
-Plug 'simeji/winresizer'
-Plug 'luochen1990/rainbow'
-Plug 'mechatroner/rainbow_csv'
-Plug 'hashivim/vim-terraform'
-Plug 'slim-template/vim-slim'
-Plug 'Shougo/junkfile.vim'
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'pechorin/any-jump.vim'
-Plug 'mattn/webapi-vim'
-Plug 'LeafCage/vimhelpgenerator'
-Plug 'kristijanhusak/vim-carbon-now-sh'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'gre/play2vim'
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'tyru/caw.vim'
-Plug 'lambdalisue/readablefold.vim'
-Plug 'junegunn/vim-peekaboo'
-
 Plug 'guns/vim-sexp', { 'for': 'clojure' }
 Plug 'liquidz/vim-iced', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
+Plug 'vim-jp/vimdoc-ja'
+Plug 'LeafCage/vimhelpgenerator'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/vim-sl'
+Plug 'tpope/vim-surround'
+Plug 'simeji/winresizer'
+Plug 'luochen1990/rainbow'
+Plug 'mechatroner/rainbow_csv'
+Plug 'Shougo/junkfile.vim'
+Plug 'pechorin/any-jump.vim'
+Plug 'mattn/webapi-vim'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'tyru/caw.vim'
+Plug 'lambdalisue/readablefold.vim'
+Plug 'junegunn/vim-peekaboo'
+Plug 'kristijanhusak/vim-carbon-now-sh'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+Plug 'easymotion/vim-easymotion'
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
-" check: defxの表示がくずれる
-" Plug 'kristijanhusak/defx-icons'
-" Plug 'kristijanhusak/defx-git'
 " Plug 'mhinz/vim-startify'
 " check: defxにもインデントラインが出る
 " Plug 'Yggdroot/indentLine'
