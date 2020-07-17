@@ -51,6 +51,7 @@ set wildmode=longest:full,full
 set nocompatible
 set noerrorbells
 set novisualbell
+set autoread
 
 let mapleader="\<Space>"
 let g:netrw_liststyle=3
@@ -67,4 +68,24 @@ nnoremap <Leader>q :q!<CR>
 
 nnoremap ,e :Ex<CR>
 
+autocmd FocusGained,BufEnter * checktime
+
+augroup auto_comment_off
+  autocmd!
+  autocmd BufEnter * setlocal formatoptions-=ro
+augroup END
+
+augroup MakefileTab
+  autocmd!
+  autocmd FileType make set noexpandtab nosmarttab
+augroup END
+
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | Ex | endif
+
+autocmd FocusGained,BufEnter * checktime
+
+autocmd BufRead,BufNewFile *.slim set filetype=slim
+autocmd BufRead,BufNewFile *.tsx set filetype=tsx
+autocmd BufRead,BufNewFile *.jsx set filetype=jsx
+autocmd BufRead,BufNewFile *.sbt set filetype=scala
+autocmd BufRead,BufNewFile *.js set filetype=javascript
