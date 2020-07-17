@@ -157,6 +157,7 @@ set nocompatible
 set inccommand=split
 set noerrorbells
 set novisualbell
+set autoread
 
 let mapleader="\<Space>"
 let NERDTreeShowHidden=1
@@ -338,6 +339,8 @@ augroup MakefileTab
 augroup END
 
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | Defx | endif
+
+autocmd FocusGained,BufEnter * checktime
 
 autocmd BufRead,BufNewFile *.slim set filetype=slim
 autocmd BufRead,BufNewFile *.tsx set filetype=tsx
