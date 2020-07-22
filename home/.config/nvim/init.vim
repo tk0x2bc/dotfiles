@@ -93,6 +93,7 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'easymotion/vim-easymotion'
+Plug 't9md/vim-quickhl'
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
 " Plug 'mhinz/vim-startify'
@@ -195,6 +196,11 @@ let g:lsp_log_verbose=1
 let g:lsp_log_file=expand('~/vim-lsp.log')
 let g:fern#logfile=expand('~/fern.tsv')
 let g:fern#comparator='lexical'
+
+if executable('rg')
+  let &grepprg='rg --vimgrep --hidden'
+  set grepformat=%f:%l:%c:%m
+endif
 
 " =======================================================
 " Functions
@@ -326,7 +332,12 @@ call deoplete#custom#var('terminal', 'require_same_tab', v:false)
 " Auto Commands
 " =======================================================
 
-augroup auto_comment_off
+augroup AuthQuickFix
+  autocmd!
+  autocmd QuickFixCmdPost *grep* cwindow
+augroup END
+
+augroup AutoCommentOff
   autocmd!
   autocmd BufEnter * setlocal formatoptions-=ro
 augroup END
