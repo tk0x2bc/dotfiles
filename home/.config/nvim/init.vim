@@ -196,6 +196,9 @@ let g:lsp_log_verbose=1
 let g:lsp_log_file=expand('~/vim-lsp.log')
 let g:fern#logfile=expand('~/fern.tsv')
 let g:fern#comparator='lexical'
+let g:iced_enable_default_key_mappings=v:true
+let g:iced#buffer#stdout#mods='vertical'
+let g:iced#buffer#error#height=5
 
 if executable('rg')
   let &grepprg='rg --vimgrep --hidden'
