@@ -542,7 +542,7 @@ if executable('java') && filereadable(expand('~/.lsp/eclipse.jdt.ls/plugins/org.
           \     '-data',
           \     getcwd()
           \ ]},
-          \ 'whitelist': ['java'],
+          \ 'whitelist': ['java', 'scala'],
           \ })
   augroup END
 endif
