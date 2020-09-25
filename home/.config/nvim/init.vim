@@ -370,6 +370,7 @@ autocmd BufRead,BufNewFile *.tsx set filetype=tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=jsx
 autocmd BufRead,BufNewFile *.sbt set filetype=scala
 autocmd BufRead,BufNewFile *.js set filetype=javascript
+autocmd BufRead,BufNewFile *.spacemacs set filetype=lisp
 
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
