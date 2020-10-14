@@ -96,8 +96,6 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'easymotion/vim-easymotion'
 Plug 't9md/vim-quickhl'
 Plug 'darfink/vim-plist'
-" Plug 'prabirshrestha/asyncomplete.vim'
-" Plug 'prabirshrestha/asyncomplete-lsp.vim'
 " Plug 'mhinz/vim-startify'
 " check: defxにもインデントラインが出る
 " Plug 'Yggdroot/indentLine'
