@@ -15,8 +15,6 @@ Plug 'junegunn/vim-plug'
 
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'lighttiger2505/deoplete-vim-lsp'
 Plug 'mattn/vim-lsp-icons'
 Plug 'ryanolsonx/vim-lsp-typescript'
 Plug 'ryanolsonx/vim-lsp-python'
@@ -28,8 +26,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'chemzqm/denite-git'
 Plug 'Shougo/neomru.vim'
-Plug 'Shougo/deoplete-terminal'
-Plug 'zchee/deoplete-zsh'
 Plug 'Shougo/deol.nvim'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'kristijanhusak/defx-icons'
@@ -96,10 +92,7 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'easymotion/vim-easymotion'
 Plug 't9md/vim-quickhl'
 Plug 'darfink/vim-plist'
-" Plug 'mhinz/vim-startify'
-" check: defxにもインデントラインが出る
-" Plug 'Yggdroot/indentLine'
-" Plug 'bronson/vim-trailing-whitespace'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -111,10 +104,10 @@ scriptencoding=utf-8
 
 syntax enable
 
-"colorscheme iceberg
-colorscheme rigel
-"colorscheme molokai
-"colorscheme pulumi
+" colorscheme iceberg
+" colorscheme rigel
+colorscheme molokai
+" colorscheme pulumi
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -168,7 +161,6 @@ let g:airline#extensions#tabline#left_alt_sep='|'
 let g:rigel_airline=1
 let g:airline_theme='rigel'
 let g:rainbow_active=1
-let g:deoplete#enable_at_startup=1
 let g:terraform_fmt_on_save=1
 let g:netrw_liststyle=3
 let g:fzf_layout={
@@ -328,9 +320,6 @@ call defx#custom#option('_', {
       \ 'show_ignored_files': v:true,
       \ })
 
-call deoplete#custom#option('smart_case', v:true)
-call deoplete#custom#var('terminal', 'require_same_tab', v:false)
-
 call deoppet#initialize()
 call deoppet#custom#option('snippets_dirs', globpath(&runtimepath, 'neosnippets', 1, 1))
 
@@ -385,7 +374,6 @@ autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
   imap <silent><buffer><C-o> <Plug>(denite_filter_quit)
   imap <silent><buffer><Esc> <Plug>(denite_filter_quit)
-  "call deoplete#custom#buffer_option('auto_complete', v:false)
 endfunction
 
 autocmd User denite-preview call s:denite_preview()
@@ -471,11 +459,11 @@ if executable('typescript-language-server')
           \ 'whitelist': ['typescript', 'typescript.tsx'],
           \ })
     au User lsp_setup call lsp#register_server({
-          \ 'name': 'javascript support using typescript-language-server',
-          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-          \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
-          \ 'whitelist': ['typescript', 'javascript', 'javascript.jsx', 'javascriptreact']
-          \ })
+         \ 'name': 'javascript support using typescript-language-server',
+         \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+         \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+         \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact']
+         \ })
   augroup END
 endif
 
