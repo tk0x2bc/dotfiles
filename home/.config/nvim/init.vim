@@ -59,6 +59,8 @@ Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/ruby-matchit'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'posva/vim-vue'
 Plug 'othree/html5.vim'
@@ -355,7 +357,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | Defx | endif
 autocmd FocusGained,BufEnter * checktime
 
 autocmd BufRead,BufNewFile *.slim set filetype=slim
-autocmd BufRead,BufNewFile *.tsx set filetype=tsx
+autocmd BufRead,BufNewFile *.tsx set filetype=typescript.tsx
 autocmd BufRead,BufNewFile *.jsx set filetype=jsx
 autocmd BufRead,BufNewFile *.sbt set filetype=scala
 autocmd BufRead,BufNewFile *.js set filetype=javascript
