@@ -18,6 +18,8 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'mattn/vim-lsp-icons'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'ryanolsonx/vim-lsp-typescript'
 Plug 'ryanolsonx/vim-lsp-python'
 Plug 'lighttiger2505/sqls.vim'
@@ -421,6 +423,23 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> <C-g> defx#do_action('print')
   nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
 endfunction
+
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    \ 'name': 'buffer',
+    \ 'allowlist': ['*'],
+    \ 'blocklist': ['go'],
+    \ 'completor': function('asyncomplete#sources#buffer#completor'),
+    \ 'config': {
+    \    'max_buffer_size': 5000000,
+    \  },
+    \ }))
+
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+    \ 'name': 'file',
+    \ 'allowlist': ['*'],
+    \ 'priority': 10,
+    \ 'completor': function('asyncomplete#sources#file#completor')
+    \ }))
 
 " =======================================================
 " Lsp Settings
