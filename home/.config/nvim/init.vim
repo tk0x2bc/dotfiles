@@ -55,6 +55,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'Rigellute/rigel'
 Plug 'tomasr/molokai'
 Plug 'pgavlin/pulumi.vim'
+Plug 'ghifarit53/tokyonight-vim'
 
 Plug 'gre/play2vim'
 Plug 'tpope/vim-rails'
@@ -113,8 +114,9 @@ syntax enable
 
 " colorscheme iceberg
 " colorscheme rigel
-colorscheme molokai
+" colorscheme molokai
 " colorscheme pulumi
+colorscheme tokyonight
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -166,7 +168,8 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep=' '
 let g:airline#extensions#tabline#left_alt_sep='|'
 let g:rigel_airline=1
-let g:airline_theme='rigel'
+" let g:airline_theme='rigel'
+let g:airline_theme='tokyonight'
 let g:rainbow_active=1
 let g:terraform_fmt_on_save=1
 let g:netrw_liststyle=3
@@ -198,6 +201,9 @@ let g:fern#comparator='lexical'
 let g:iced_enable_default_key_mappings=v:true
 let g:iced#buffer#stdout#mods='vertical'
 let g:iced#buffer#error#height=5
+" let g:tokyonight_style='storm'
+let g:tokyonight_style='night'
+let g:tokyonight_enable_italic=1
 
 if executable('rg')
   let &grepprg='rg --vimgrep --hidden'
