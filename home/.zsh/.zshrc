@@ -27,7 +27,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 14)
+export JAVA_HOME=$(/usr/libexec/java_home -v 15)
 
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1000
