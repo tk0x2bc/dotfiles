@@ -223,6 +223,15 @@ function! FzfBLinesCurrWord()
   endif
 endfunction
 
+function! OpenNewDefx() abort
+  let l:rand = Rand()
+  execute ':Defx -buffer-name='.l:rand
+endfunction
+
+function! Rand() abort
+  return str2nr(matchstr(reltimestr(reltime()), '\v\.@<=\d+')[1:])
+endfunction
+
 " =======================================================
 " Key Mappings
 " =======================================================
@@ -261,7 +270,7 @@ nnoremap <silent>,l :BLines<CR>
 nnoremap <silent>,h :History<CR>
 nnoremap <silent>,m :Mark<CR>
 nnoremap <silent>,ag :Ag<CR>
-nnoremap <silent>,d :Defx<CR>
+nnoremap <silent>,d :call OpenNewDefx()<CR>
 nnoremap <silent>,n :NERDTreeToggle<CR>
 " https://medium.com/@bookun/vim-advent-calendar-2019-12-20-63a12396211f
 nnoremap <silent>df :Deol -split=floating<CR>
