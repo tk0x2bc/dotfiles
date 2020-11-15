@@ -113,10 +113,10 @@ scriptencoding=utf-8
 syntax enable
 
 " colorscheme iceberg
-" colorscheme rigel
+colorscheme rigel
 " colorscheme molokai
 " colorscheme pulumi
-colorscheme tokyonight
+" colorscheme tokyonight
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -204,6 +204,7 @@ let g:iced#buffer#error#height=5
 " let g:tokyonight_style='storm'
 let g:tokyonight_style='night'
 let g:tokyonight_enable_italic=1
+let g:denite_source_ridgepole#schemafile_path='db/schema/Schemafile'
 
 if executable('rg')
   let &grepprg='rg --vimgrep --hidden'
@@ -262,6 +263,7 @@ nnoremap <Leader>u :Denite source<CR>
 nnoremap <Leader>c :Denite gitstatus<CR>
 nnoremap <Leader>r :Denite register<CR>
 " https://wonderwall.hatenablog.com/entry/2017/10/07/220000
+nnoremap <silent>,r :Denite ridgepole<CR>
 nnoremap <silent>,f :Files<CR>
 nnoremap <silent>,g :GFiles<CR>
 nnoremap <silent>,x :GFiles?<CR>
