@@ -30,6 +30,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'chemzqm/denite-git'
+Plug 'xxuxa-k/denite-source-ridgepole'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/deol.nvim'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -101,6 +102,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 't9md/vim-quickhl'
 Plug 'darfink/vim-plist'
 Plug 'mhinz/vim-startify'
+Plug 'xxuxa-k/fretboard.vim'
 
 call plug#end()
 
