@@ -49,7 +49,7 @@ Plug 'lambdalisue/fern-comparator-lexical.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'scrooloose/syntastic'
 Plug 'cocopon/iceberg.vim'
@@ -347,14 +347,14 @@ call defx#custom#option('_', {
       \ 'show_ignored_files': v:true,
       \ })
 
-call deoppet#initialize()
-call deoppet#custom#option('snippets_dirs', globpath(&runtimepath, 'neosnippets', 1, 1))
+" call deoppet#initialize()
+" call deoppet#custom#option('snippets_dirs', globpath(&runtimepath, 'neosnippets', 1, 1))
 
-imap <C-k>  <Plug>(deoppet_expand)
-imap <C-f>  <Plug>(deoppet_jump_forward)
-imap <C-b>  <Plug>(deoppet_jump_backward)
-smap <C-f>  <Plug>(deoppet_jump_forward)
-smap <C-b>  <Plug>(deoppet_jump_backward)
+" imap <C-k>  <Plug>(deoppet_expand)
+" imap <C-f>  <Plug>(deoppet_jump_forward)
+" imap <C-b>  <Plug>(deoppet_jump_backward)
+" smap <C-f>  <Plug>(deoppet_jump_forward)
+" smap <C-b>  <Plug>(deoppet_jump_backward)
 
 " =======================================================
 " Auto Commands
