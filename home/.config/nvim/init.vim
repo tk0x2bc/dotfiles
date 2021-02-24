@@ -21,8 +21,6 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'prabirshrestha/asyncomplete-emmet.vim'
-Plug 'ryanolsonx/vim-lsp-typescript'
-Plug 'ryanolsonx/vim-lsp-python'
 Plug 'lighttiger2505/sqls.vim'
 
 Plug 'vim-airline/vim-airline'
